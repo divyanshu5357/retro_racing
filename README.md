@@ -70,7 +70,3 @@ For each frame, RetroRacer calculates the road width and centre position for eve
 - Sound effects and music
 - Opponent cars with collision detection
 - Textured sprites and weather effects
-
-## License
-
-Add an MIT `LICENSE` file before publishing if you want others to freely use, modify, and distribute this project.
