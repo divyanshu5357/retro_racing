@@ -1,4 +1,44 @@
+# macOS
+.DS_Store
+
+# Build directories
+build/
+cmake-build-*/
 out/
+bin/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Makefile
+CTestTestfile.cmake
+install_manifest.txt
+
+# Object and binary files
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.exe
+*.out
+*.app
+
+# Visual Studio
 .vs/
-*.user
+*.VC.db
+*.VC.opendb
 *.suo
+*.user
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Temporary files
+*.swp
+*.tmp

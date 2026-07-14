@@ -1,19 +1,16 @@
-cmake_minimum_required(VERSION 3.20)
-project(RetroRacer VERSION 1.0.0 LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.12)
+project(RetroRacer CXX)
 
-set(CMAKE_CXX_STANDARD 20)
+# Set C++ standard to C++17
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
 
-if(NOT WIN32)
-  message(FATAL_ERROR "RetroRacer currently uses the Windows Console API.")
-endif()
+# Find the ncurses library on macOS
+find_package(Curses REQUIRED)
 
-add_executable(retro_racer src/main.cpp)
-target_compile_definitions(retro_racer PRIVATE UNICODE _UNICODE WIN32_LEAN_AND_MEAN NOMINMAX)
+# Add your source file (assuming it is named main.cpp)
+add_executable(retroracer main.cpp)
 
-if(MSVC)
-  target_compile_options(retro_racer PRIVATE /W4 /permissive-)
-else()
-  target_compile_options(retro_racer PRIVATE -Wall -Wextra -Wpedantic)
-endif()
+# Include the ncurses directories and link the library
+target_include_directories(retroracer PRIVATE ${CURSES_INCLUDE_DIRS})
+target_link_libraries(retroracer PRIVATE ${CURSES_LIBRARIES})
