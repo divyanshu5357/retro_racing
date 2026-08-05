@@ -95,7 +95,6 @@ struct InputState {
     bool escape = false;
 };
 
-// Fixed: Employs a time-based decay buffer so held keys don't drop out on macOS
 void update_input(InputState& input, float delta) {
     int ch = getch();
     

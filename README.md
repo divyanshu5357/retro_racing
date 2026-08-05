@@ -70,3 +70,4 @@ For each frame, RetroRacer calculates the road width and centre position for eve
 - Sound effects and music
 - Opponent cars with collision detection
 - Textured sprites and weather effects
+g++ -std=c++20 main.cpp -o RetroRacer./RetroRacer
